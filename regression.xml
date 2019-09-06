@@ -2,8 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
         <suite name="regression">
         <test name="regression">
-        <classes>
-
-        </classes>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
         </test>
         </suite>
