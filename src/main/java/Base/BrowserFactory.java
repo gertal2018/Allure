@@ -25,6 +25,10 @@ public class BrowserFactory {
     public static WebDriver startBrowser(String URL) {
 
         String browser = "";
+        browserName = System.getProperty("browser");
+        if(browserName == null){
+            browserName = "chrome";
+        }
 
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
