@@ -108,7 +108,7 @@ public class GitHub_SignIn_InvalidCredentials {
         signInPage.verifyErrorMessageAppears();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void finish(ITestResult iTestResult) {
         Reporter.failedTest(iTestResult);
         BrowserFactory.closeBrowser();

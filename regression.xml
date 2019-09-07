@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-        <suite name="regression">
-        <test name="regression">
+<suite name="regression">
+    <test name="regression">
         <groups>
             <run>
                 <include name="regression"/>
             </run>
         </groups>
-        </test>
-        </suite>
+        <packages>
+            <package name="GitHubTests"></package>
+        </packages>
+    </test>
+</suite>

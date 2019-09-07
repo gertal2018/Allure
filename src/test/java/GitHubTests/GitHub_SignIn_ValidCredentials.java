@@ -65,7 +65,7 @@ public class GitHub_SignIn_ValidCredentials {
 //    }
 
     @Description("Login scenario with valid email credentials")
-    @Test(priority = 1, dataProvider = "validEmail", groups = {"regression"})
+    @Test(priority = 1, dataProvider = "validEmail", groups = {"regression", "test"})
     @Severity(SeverityLevel.CRITICAL)
     public void SignInWithValidEmailCredentialsTest(String email, String password, String username) {
         signInPage.ClickSignInLink()
@@ -88,7 +88,7 @@ public class GitHub_SignIn_ValidCredentials {
                 .verifyUsername(username);
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void finish(ITestResult iTestResult) {
         Reporter.failedTest(iTestResult);
         BrowserFactory.closeBrowser();
