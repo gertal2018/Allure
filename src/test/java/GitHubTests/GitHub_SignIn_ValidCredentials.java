@@ -20,7 +20,8 @@ public class GitHub_SignIn_ValidCredentials {
     public Object[] getValidEmailData() {
         String[][] userData = {
                 {"zakayla@fbeaveraqb.com", "Temptest1234!", "user29082019"},
-                {"belecire@doc-mail.net", "TemporaryPassword1234", "tester020920019"}
+                {"belecire@doc-mail.net", "TemporaryPassword1234", "tester020920019"},
+                {"tester", "tester", "tester"}
         };
         return userData;
     }
