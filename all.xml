@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="GitHub">
     <test name="AllGitHubTests">
-        <parameter name="browserName" value="${browserName}"></parameter>
+        <parameter name="browser" value="${browserName}"></parameter>
         <groups>
             <run>
                 <include name="all"/>
