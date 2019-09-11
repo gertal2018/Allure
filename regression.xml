@@ -4,7 +4,7 @@
         <parameter name="browserName" value="${browserName}"></parameter>
         <groups>
             <run>
-                <include name="regression"/>
+                <include name="invalid-regression"/>
             </run>
         </groups>
         <packages>
