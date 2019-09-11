@@ -65,7 +65,7 @@ public class GitHub_SignIn_ValidCredentials {
 //    }
 
     @Description("Login scenario with valid email credentials")
-    @Test(priority = 1, dataProvider = "validEmail", groups = {"valid-regression", "test"})
+    @Test(priority = 1, dataProvider = "validEmail", groups = {"all","valid-regression", "test"})
     @Severity(SeverityLevel.CRITICAL)
     public void SignInWithValidEmailCredentialsTest(String email, String password, String username) {
         signInPage.ClickSignInLink()
@@ -77,7 +77,7 @@ public class GitHub_SignIn_ValidCredentials {
     }
 
     @Description("Login scenario with valid username credentials")
-    @Test(priority = 2, dataProvider = "validUsername", groups = {"valid-regression"})
+    @Test(priority = 2, dataProvider = "validUsername", groups = {"all","valid-regression"})
     @Severity(SeverityLevel.CRITICAL)
     public void SignInWithValidUsernameCredentialsTest(String email, String password, String username) {
         signInPage.ClickSignInLink()

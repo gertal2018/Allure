@@ -32,7 +32,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login without entering credentials")
-    @Test(priority = 0, groups = {"invalid-regression"})
+    @Test(priority = 0, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithoutCredentialsTest() {
         signInPage.ClickSignInLink()
@@ -43,7 +43,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with valid email and empty password")
-    @Test(priority = 1, groups = {"invalid-regression"})
+    @Test(priority = 1, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithValidEmail_EmptyPasswordTest() {
         signInPage.ClickSignInLink()
@@ -54,7 +54,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with empty email and valid password")
-    @Test(priority = 2, groups = {"invalid-regression"})
+    @Test(priority = 2, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithEmptyEmail_ValidPasswordTest() {
         signInPage.ClickSignInLink()
@@ -65,7 +65,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with valid email and invalid password")
-    @Test(priority = 3, groups = {"invalid-regression"})
+    @Test(priority = 3, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithValidEmail_InvalidPasswordTest() {
         signInPage.ClickSignInLink()
@@ -76,7 +76,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with valid username and invalid password")
-    @Test(priority = 4, groups = {"invalid-regression"})
+    @Test(priority = 4, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithValidUsername_InvalidPasswordTest() {
         signInPage.ClickSignInLink()
@@ -87,7 +87,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with invalid email and valid password")
-    @Test(priority = 5, groups = {"invalid-regression"})
+    @Test(priority = 5, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithInvalidEmail_ValidPasswordTest() {
         signInPage.ClickSignInLink()
@@ -98,7 +98,7 @@ public class GitHub_SignIn_InvalidCredentials {
     }
 
     @Description("Login with invalid username and valid password")
-    @Test(priority = 6, groups = {"invalid-regression"})
+    @Test(priority = 6, groups = {"all","invalid-regression"})
     @Severity(SeverityLevel.NORMAL)
     public void SignIn_WithInvalidUsername_ValidPasswordTest() {
         signInPage.ClickSignInLink()

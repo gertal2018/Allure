@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression">
+    <test name="regression">
+        <parameter name="browserName" value="${browserName}"></parameter>
+        <groups>
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="GitHubTests"></package>
+        </packages>
+    </test>
+</suite>
