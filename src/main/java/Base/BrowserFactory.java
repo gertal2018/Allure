@@ -15,7 +15,7 @@ public class BrowserFactory {
     public static WebDriverWait wait;
     public static int defaultWaitTime = 10;
     public static int defaultImplicitWaitTime = 30;
-    public static String browserName = System.getProperty("browser");//chrome, firefox
+    public static String browserName = "chrome";//System.getProperty("browser");//chrome, firefox
 
     public BrowserFactory(WebDriver myDriver) {
         this.driver = myDriver;
