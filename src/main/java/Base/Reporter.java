@@ -20,7 +20,7 @@ public class Reporter extends BrowserFactory {
     public static void failedTest(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE){
             //attachScreenshotToAllure(result);
-            attachScreenshotToAllure();
+           // attachScreenshotToAllure();
         }
     }
 

@@ -91,7 +91,7 @@ public class GitHub_SignIn_ValidCredentials {
 
     @AfterMethod(alwaysRun = true)
     public void finish(ITestResult iTestResult) {
-        Reporter.failedTest(iTestResult);
+       // Reporter.failedTest(iTestResult);
         BrowserFactory.closeBrowser();
     }
 
