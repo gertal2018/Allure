@@ -80,7 +80,8 @@
                 <version>2.20</version>
                 <configuration>
                    <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <!--suppress UnresolvedMavenProperty -->
+                       <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                     <!--<groups>invalid-regression</groups>-->
                     <argLine>
