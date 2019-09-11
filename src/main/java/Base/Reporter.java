@@ -19,12 +19,13 @@ public class Reporter extends BrowserFactory {
 
     public static void failedTest(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE){
-            attachScreenshotToAllure(result);
+            //attachScreenshotToAllure(result);
+            attachScreenshotToAllure();
         }
     }
 
     @Attachment(type = "image/png")
-    public static byte[] attachScreenshotToAllure(ITestResult result)/* throws IOException */ {
+    public static byte[] attachScreenshotToAllure()/* throws IOException ITestResult result */ {
 
         try {
             File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

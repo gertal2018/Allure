@@ -40,6 +40,7 @@ public class BaseUI extends BrowserFactory {
         } catch (Exception e) {
             String message = "FAIL - Element <<" + elementName + ">> is not clickable.";
             System.out.println(message);
+            Reporter.attachScreenshotToAllure();
             Assert.fail(message);
         }
 
