@@ -80,8 +80,7 @@
                 <version>2.20</version>
                 <configuration>
                    <suiteXmlFiles>
-                        <suiteXmlFile>invalid-regression.xml</suiteXmlFile>
-                       <suiteXmlFile>valid-regression.xml</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile}}</suiteXmlFile>
                     </suiteXmlFiles>
                     <!--<groups>invalid-regression</groups>-->
                     <argLine>
