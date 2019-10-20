@@ -19,7 +19,7 @@ public class SearchTest {
         navigation = new Navigation(driver);
     }
 
-    @Test
+    @Test(groups = {"myStore_all"})
     public void searchFunctionalityTest(){
         navigation.enterValueInSearchField(productName)
         .clickSearchButton()
