@@ -41,7 +41,7 @@ public class BrowserFactory {
             browser = "Google Chrome";
         } else if (browserName.equalsIgnoreCase("firefox")) {
            // WebDriverManager.firefoxdriver().setup();
-            System.setProperty("webdriver.gecko.driver", Helper.rootPath + "\\src\\main\\resources\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", Helper.rootPath + "\\src\\main\\resources\\geckodriver64.exe");
             driver = new FirefoxDriver();
             browser = "Mozilla FireFox";
         } else if (browserName.equalsIgnoreCase("explorer")){
