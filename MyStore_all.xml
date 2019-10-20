@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="MyStore">
+<suite name="MyStore Regression">
     <test name="InvalidGitHubSignIn">
-        <parameter name="browserName" value="${browserName}"></parameter>
+<!--        <parameter name="browserName" value="${browserName}"></parameter>-->
         <groups>
             <run>
                 <include name="myStore-all"/>
