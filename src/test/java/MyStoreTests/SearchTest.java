@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 public class SearchTest {
 
     public Navigation navigation;
-    public SearchResultPage searchPage;
 
     private String productName = "Blouse";
 
@@ -19,15 +18,14 @@ public class SearchTest {
     public void setup(){
         WebDriver driver = BrowserFactory.startBrowser(Helper.myStoreURL);
         navigation = new Navigation(driver);
-        searchPage = new SearchResultPage(driver);
     }
 
     @Test(groups = {"myStore-all"})
     public void searchFunctionalityTest(){
-        navigation.enterValueInSearchField(productName);
-        navigation.clickSearchButton();
-        searchPage .verifySearchedWord(productName);
-        searchPage.mouseHoverProduct(productName);
-        searchPage.clickAddToCartButton();
+        navigation.enterValueInSearchField(productName)
+        .clickSearchButton()
+        .verifySearchedWord(productName)
+        .mouseHoverProduct(productName)
+        .clickAddToCartButton();
     }
 }
