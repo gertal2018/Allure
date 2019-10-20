@@ -3,6 +3,7 @@ package Base;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
@@ -77,5 +78,10 @@ public class BaseUI extends BrowserFactory {
     public void scrollIntoView(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void mouseHoverElement(WebElement element){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
     }
 }

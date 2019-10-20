@@ -2,8 +2,7 @@ package GitHubTests;
 
 import Base.BrowserFactory;
 import Base.Helper;
-import Base.Reporter;
-import Pages.SignInPage;
+import GitHubPages.SignInPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;

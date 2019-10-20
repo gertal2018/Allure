@@ -1,9 +1,13 @@
 package Base;
 
+import io.github.bonigarcia.wdm.EdgeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,7 +19,7 @@ public class BrowserFactory {
     public static WebDriverWait wait;
     public static int defaultWaitTime = 10;
     public static int defaultImplicitWaitTime = 30;
-    public static String browserName = System.getProperty("browser");//chrome, firefox
+    public static String browserName = System.getProperty("browser");//chrome, firefox, explorer, edge, opera
 
     public BrowserFactory(WebDriver myDriver) {
         this.driver = myDriver;
@@ -37,7 +41,19 @@ public class BrowserFactory {
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-            browser = "Mozila FireFox";
+            browser = "Mozilla FireFox";
+        } else if (browserName.equalsIgnoreCase("explorer")){
+            WebDriverManager.iedriver().setup();
+            driver = new InternetExplorerDriver();
+            browser = "Internet Explorer";
+        } else if(browserName.equalsIgnoreCase("edge")){
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+            browser = "Microsoft Edge";
+        } else if(browserName.equalsIgnoreCase("opera")){
+            WebDriverManager.operadriver().setup();
+            driver = new OperaDriver();
+            browser = "Opera";
         }
 
         System.out.println("Opening --" + URL + "-- on " + browser + " browser");
