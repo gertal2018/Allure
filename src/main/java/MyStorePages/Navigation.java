@@ -25,13 +25,13 @@ public class Navigation extends BrowserFactory {
     @FindBy (name = "submit_search")
     WebElement searchButton;
 
-    public Navigation enterValueInSearchField(String value){
+    public void enterValueInSearchField(String value){
         ui.enterTextIntoElement(searchField, "Search Field", value);
-        return this;
+       // return this;
     }
 
-    public SearchResultPage clickSearchButton() {
+    public void clickSearchButton() {
         ui.clickOnElement(searchButton, "Search Result Button");
-        return searchResultPage;
+       // return searchResultPage;
     }
 }

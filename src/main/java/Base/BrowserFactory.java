@@ -31,15 +31,17 @@ public class BrowserFactory {
         String browser = "";
 
         if(browserName == null){
-            browserName = "chrome";
+            browserName = "firefox";
         }
 
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
+           // WebDriverManager.chromedriver().setup();
+            System.setProperty("webdriver.chrome.driver", Helper.rootPath + "\\src\\main\\resources\\chromedriver.exe");
             driver = new ChromeDriver();
             browser = "Google Chrome";
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
+           // WebDriverManager.firefoxdriver().setup();
+            System.setProperty("webdriver.gecko.driver", Helper.rootPath + "\\src\\main\\resources\\geckodriver.exe");
             driver = new FirefoxDriver();
             browser = "Mozilla FireFox";
         } else if (browserName.equalsIgnoreCase("explorer")){

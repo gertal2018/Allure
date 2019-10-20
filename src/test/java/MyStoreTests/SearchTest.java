@@ -3,28 +3,31 @@ package MyStoreTests;
 import Base.BrowserFactory;
 import Base.Helper;
 import MyStorePages.Navigation;
+import MyStorePages.SearchResultPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SearchTest {
 
-    Navigation navigation;
+    public Navigation navigation;
+    public SearchResultPage searchPage;
 
-    String productName = "Blouse";
+    private String productName = "Blouse";
 
-    @BeforeMethod()
+    @BeforeMethod(alwaysRun = true)
     public void setup(){
         WebDriver driver = BrowserFactory.startBrowser(Helper.myStoreURL);
         navigation = new Navigation(driver);
+        searchPage = new SearchResultPage(driver);
     }
 
-    @Test(groups = {"myStore_all"})
+    @Test(groups = {"myStore-all"})
     public void searchFunctionalityTest(){
-        navigation.enterValueInSearchField(productName)
-        .clickSearchButton()
-        .verifySearchedWord(productName)
-        .mouseHoverProduct(productName)
-        .clickAddToCartButton();
+        navigation.enterValueInSearchField(productName);
+        navigation.clickSearchButton();
+        searchPage .verifySearchedWord(productName);
+        searchPage.mouseHoverProduct(productName);
+        searchPage.clickAddToCartButton();
     }
 }
