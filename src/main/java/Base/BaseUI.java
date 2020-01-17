@@ -84,4 +84,8 @@ public class BaseUI extends BrowserFactory {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }
+
+    public String getElementAttributeText(WebElement element, String attributeType){
+        return element.getAttribute(attributeType);
+    }
 }

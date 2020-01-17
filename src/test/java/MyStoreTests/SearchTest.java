@@ -26,6 +26,7 @@ public class SearchTest {
         .clickSearchButton()
         .verifySearchedWord(productName)
         .mouseHoverProduct(productName)
-        .clickAddToCartButton();
+        .clickAddToCartButton()
+        .verifyAddedToCartImageIsPresent(productName);
     }
 }

@@ -41,4 +41,11 @@ public class SearchResultPage extends BrowserFactory {
         ui.clickOnElement(addToCartButton, "Add to Cart Button");
         return this;
     }
+
+    @Step("Verifying that added to cart image is present")
+    public SearchResultPage verifyAddedToCartImageIsPresent(String productName){
+        WebElement element = driver.findElement(By.xpath("//div[@class='product-image-container layer_cart_img']/img[@title='"+productName+"']"));
+        ui.verifyElementIsPresentOnThePage(element, "Product Image");
+        return this;
+    }
 }
